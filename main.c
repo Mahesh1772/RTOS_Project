@@ -49,7 +49,6 @@ int main (void) {
 	initUART2();
 	PWM_Init();
 	initLED();
-	//music();
 	
 		
 		osKernelInitialize();
@@ -58,8 +57,8 @@ int main (void) {
 	
 		osThreadNew(flashGreen, NULL, NULL);
 		osThreadNew(RedBlink, NULL, NULL);
-	  osThreadNew(music, NULL, NULL);
-	  osThreadNew(tBrain, NULL, NULL);
+	  	osThreadNew(music, NULL, NULL);
+	  	osThreadNew(tBrain, NULL, NULL);
 		osKernelStart();
 	
 		while(1) {

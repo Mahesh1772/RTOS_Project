@@ -31,10 +31,10 @@ void moveForward(int power)
 	
 	float coeff = (float) power / 100.0f;
 	
-	TPM0_C0V = TPM0->MOD * coeff;
-	TPM0_C1V = 0;
-	TPM0_C2V = TPM0->MOD * coeff;
-	TPM0_C3V = 0;
+    TPM0_C0V = (uint16_t)((uint16_t)(TPM0->MOD) * coeff);
+    TPM0_C1V = 0;
+    TPM0_C2V = (uint16_t)((uint16_t)(TPM0->MOD) * coeff);
+    TPM0_C3V = 0;
 }
 
 void moveBackward(int power)
@@ -46,10 +46,10 @@ void moveBackward(int power)
 	
 	float coeff = (float) power / 100.0f;
 	
-	TPM0_C0V = 0;
-	TPM0_C1V = TPM0->MOD * coeff;
-	TPM0_C2V = 0;
-	TPM0_C3V = TPM0->MOD * coeff;
+    TPM0_C0V = 0;
+    TPM0_C1V = (uint16_t)((uint16_t)(TPM0->MOD) * coeff);
+    TPM0_C2V = 0;
+    TPM0_C3V = (uint16_t)((uint16_t)(TPM0->MOD) * coeff);
 }
 
 void moveLeft(int power)
@@ -61,10 +61,10 @@ void moveLeft(int power)
 	
 	float coeff = (float) power / 100.0f;
 	
-	TPM0_C0V = 0;
-	TPM0_C1V = TPM0->MOD * coeff;
-	TPM0_C2V = TPM0->MOD * coeff;
-	TPM0_C3V = 0;
+    TPM0_C0V = 0;
+    TPM0_C1V = (uint16_t)((uint16_t)(TPM0->MOD) * coeff);
+    TPM0_C2V = (uint16_t)((uint16_t)(TPM0->MOD) * coeff);
+    TPM0_C3V = 0;
 }
 
 void moveRight(int power)
@@ -76,10 +76,10 @@ void moveRight(int power)
 	
 	float coeff = (float) power / 100.0f;
 	
-	TPM0_C0V =  TPM0->MOD * coeff;
-	TPM0_C1V = 0;
-	TPM0_C2V = 0;
-	TPM0_C3V = TPM0->MOD * coeff;
+    TPM0_C0V = (uint16_t)((uint16_t)(TPM0->MOD) * coeff);
+    TPM0_C1V = 0;
+    TPM0_C2V = 0;
+    TPM0_C3V = (uint16_t)((uint16_t)(TPM0->MOD) * coeff);
 }
 
 void initMotors(void) 
