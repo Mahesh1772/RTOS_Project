@@ -30,34 +30,32 @@ This project focuses on developing an ARM Cortex-M0 microcontroller-based system
 ## Project Structure
 
 ```
-├── audio.c
 ├── audio.h
 ├── constants.h
-├── led.c
 ├── led.h
 ├── main.c
-├── motors.c
 ├── motors.h
-├── uart.c
 ├── uart.h
 └── README.md
 ```
 
-- `audio.c` and `audio.h`: Contains functions for real-time audio playback using PWM and RTOS tasks.
+- `audio.h`: Contains functions for real-time audio playback using PWM and RTOS tasks.
 - `constants.h`: Defines constant values used throughout the project.
-- `led.c` and `led.h`: Implements functions for controlling the LED patterns based on robot speed.
-- `main.c`: The main entry point of the application, responsible for initializing components and starting the RTOS kernel.
-- `motors.c` and `motors.h`: Provides functions for controlling the movement of the motors.
-- `uart.c` and `uart.h`: Handles UART communication, including wireless communication with the ESP32 module.
+- `led.h`: Implements functions for controlling the LED patterns based on robot speed.
+- `main.c`: The main entry point of the application, responsible for initializing components, starting the RTOS kernel, wireless communication with the ESP32 module and for synchronization of all tasks.
+- `motors.h`: Provides functions for controlling the movement of the motors.
+- `uart.h`: Handles UART communication from ESP32 to MKL25Z board.
 - `README.md`: This file, providing an overview of the project.
 
 ## Getting Started
 
 1. Clone the repository or download the source code.
-2. Connect the MKL25Z board to your development environment.
+2. Connect the MKL25Z board to your development environment (Preferably Keil).
 3. Build and flash the firmware onto the microcontroller.
-4. Connect the required hardware components (LEDs, motors, ESP32 module).
-5. Power on the system and observe the real-time audio playback, LED patterns, and motor movements.
+4. Create an MIT Mobile application to send and receive commmands to ESP32.
+5. Ensure ESP32 and the mobile device controller are connected to the same WiFi.
+6. Connect the required hardware components (LEDs, motors, ESP32 module) to MKL25Z board.
+7. Power on the system and observe the real-time audio playback, LED patterns, and motor movements.
 
 ## Contributing
 
